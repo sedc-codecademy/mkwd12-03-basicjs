@@ -1,4 +1,4 @@
-# Group [NUMBER]
+# Group G1-OHRID
 
 ## Contact
 - Trainer: Aleksandra Mitkovska  aleksandra.mitkovska95@hotmail.com
