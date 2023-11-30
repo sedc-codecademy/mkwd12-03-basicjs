@@ -1,0 +1,20 @@
+Exercise 1:
+Description: Use prompt() to ask the user for their age. Based on the age, provide different messages.
+
+Action: Ask the user for their age and suggest whether they are a child, teenager, adult, or senior.
+
+Time to Accomplish: 15 minutes.
+
+Exercise 2:
+Description: Check if the input variable is a number or not using isNaN().
+
+Action: Prompt the user to enter a value, then determine and display whether the entered value is a number or not.
+
+Time to Accomplish: 15 minutes.
+
+Exercise 3:
+Description: Find the largest of two numbers.
+
+Action: Use prompt() to get two numbers from the user, then compare and display the larger number.
+
+Time to Accomplish: 15 minutes.
