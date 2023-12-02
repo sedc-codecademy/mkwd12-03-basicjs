@@ -1,5 +1,5 @@
-# Group [NUMBER]
+# Group G7
 
 ## Contact
-- Trainer: [NAME] [MAIL]
-- Assistant: [NAME] [MAIL]
+- Trainer: Panche Manaskov: panemanaskov@gmail.com
+- Assistant: Aleksandar Milovski: aleksandarmilovski1@gmail.com
