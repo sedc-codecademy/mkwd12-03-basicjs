@@ -1,0 +1,6 @@
+Exercise 1: Temperature Converter
+Write a program that converts temperatures between Celsius and Fahrenheit. Ask the user to enter a temperature and its unit (C or F) using prompt(). Convert and display the result.
+Exercise 2: Age Calculator
+Write a program that calculates the age of a person. Ask the user for their birth year using prompt() and calculate their age. Display the result.(The year is 2023).
+Exercise 3: Multiplication Table
+Ask the user to enter a number using prompt(). Display the multiplication table (up to 10) for that number in the console or an alert.
