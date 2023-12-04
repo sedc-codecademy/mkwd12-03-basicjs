@@ -2,4 +2,4 @@
 
 ## Contact
 - Trainer: Aneta Stankovska - anetastankovskaane@gmail.com
-- Co-Trainer: tpelivanov.gmail.com
+- Co-Trainer: Todor Pelivanov - tpelivanov.gmail.com
