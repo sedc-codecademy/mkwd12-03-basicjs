@@ -1,5 +1,5 @@
-# Group [NUMBER]
+# Group 3
 
 ## Contact
-- Trainer: [NAME] [MAIL]
-- Assistant: [NAME] [MAIL]
+- Trainer: Aneta Stankovska - anetastankovskaane@gmail.com
+- Co-Trainer: Todor Pelivanov - tpelivanov.gmail.com
