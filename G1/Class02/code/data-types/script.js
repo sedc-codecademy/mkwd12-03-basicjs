@@ -57,3 +57,29 @@ let emptyVariable = null;
 console.log(emptyVariable); // null
 
 
+
+console.log("");
+console.log("================ SPECIAL NUMBERS ================");
+
+console.log("======= NaN ======="); // Not a Number
+// It is result of an operation that cannot produce a valid numerical result
+let result = 100 / "deset";
+console.log(result);
+console.log(typeof result);  // typeof => used to determine of which type is a certain variable
+
+// Ways to check wether a value is NaN
+console.log(isNaN(result)); // true
+// console.log(Number("tekst")); // NaN => converting tekst to number
+console.log(isNaN("tekst")); // true
+console.log(Number.isNaN("tekst")); // false
+// unlike Number.isNaN(), isNaN() forcefully converts the parameter to a number
+// in most cases Number.isNaN() is the way to go 
+
+console.log("======= Inifinities =======");
+let infinity = Infinity;
+console.log(infinity);
+console.log(typeof infinity);
+
+console.log(1 / 0);  // Infinity
+console.log(-1 / 0);  // -Infinity
+// Don't divide by zero!
