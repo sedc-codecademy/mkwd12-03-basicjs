@@ -1,4 +1,4 @@
-console.log("===================== Logical Operators =====================");
+console.log("===================== LOGICAL OPERATORS =====================");
 
 // Used with Boolean values or expressions ***
 
