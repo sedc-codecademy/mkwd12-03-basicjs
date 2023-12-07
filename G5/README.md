@@ -1,5 +1,5 @@
-# Group [NUMBER]
+# Group [G5]
 
 ## Contact
-- Trainer: [NAME] [MAIL]
-- Assistant: [NAME] [MAIL]
+- Trainer: [Danilo Borozan] [MAIL]
+- Assistant: [Ivan Ivanov] [MAIL]
