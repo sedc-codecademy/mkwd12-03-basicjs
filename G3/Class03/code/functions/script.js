@@ -1,0 +1,128 @@
+console.log("======================== FUNCTIONS ========================");
+
+console.log("");
+console.log("=========== Function Declaration ===========");
+// function DECLARATION base syntax
+function functionName(parameter1, parameter2) {
+    // FUNCTION BODY => the code that will be executed when the function name is called
+    // code goes here ...
+}
+// function => keyword for decalaring function
+// functionName => the name of the function (what the function does)
+// parameters => values that are used within the function (in the function body)
+
+// function without parameters
+function greet() {
+    console.log("Hello from Qinshift Academy :)");
+}
+
+// console.log("Hello Todor, Qinshift Academy wishes you happy holidays!");
+// console.log("Hello Sirma, Qinshift Academy wishes you happy holidays!");
+// console.log("Hello Slavko, Qinshift Academy wishes you happy holidays!");
+// console.log("Hello Boris, Qinshifst Academy wishe you happy holidays!");
+// console.log("Hello Sasho, Qinshift Academy wishes you happy holidays!");
+// console.log("Hello Vladimir, Quinshift Academys wishes yrou happy holidays!");
+// console.log("Hello Nadica, Qinshift Academy wishes you happy holidays!");
+// console.log("Hello Kiro, Quinshift Academys wishes yrou happy holidays!");
+// HOW TO SOLVE THIS PROBLEM ?
+// You guessed it => FUNCTION
+
+// function with one parameter
+// studentName is a placeholder for a value that will be passed when the function greetStudent is called
+function greetStudent(studentName) {
+    console.log(`Hello ${studentName}, Qinshift Academy wishes you happy holidays!`);
+}
+
+
+
+console.log("");
+console.log("=========== Function Execution ===========");
+// calling (executing) previously declared function
+// syntax for execution:
+// functionName() or if it has parameters functionName(parameter1, parameter2)
+
+// calling the greet function (function without parameter)
+// let test = greet();
+// console.log(test);
+greet();
+greet();
+// can be called as many times as you need
+
+// calling the greetStudent function (function with one parameter)
+greetStudent(); // will get undefined for the studentName variable if we don't send name as an argument(parameter)
+let studentName = "Stefan";
+greetStudent("Bob Bobsky");
+greetStudent("Sirma");
+greetStudent("Slavko");
+greetStudent(studentName);
+// greetStudent(234234); // why do this ?
+
+
+
+console.log("");
+console.log("=========== Function that returns a value ===========");
+// using the keyword 'return'
+// NOTE: the execution of the code ENDS with the RETURN (the code after that doesn't execute)
+
+function sum(number1, number2) {
+    let result = number1 + number2;
+    return result;
+    console.log(`Result is ${result}`);  // UNREACHABLE CODE !!!
+}
+
+let result = sum(5, 10);
+console.log(`Result is ${result}`);
+
+
+// Function for getting number statistics
+function getNumberStats(number) {
+    // logic for getting the number stats
+    // NOTE: SWITCH statement evalutes ONLY the VALUE of the passed variable
+    // switch (number) {
+    //     case number > 0:
+    //         return "Positive";
+    //     // break; when we have return statement we don't need break
+    //     case number < 0:
+    //         return "Negative";
+    //     case number === 0:
+    //         return "Zero";
+    //     default:
+    //         return "Invalid number!";W
+    // }
+    if (number > 0) {
+        return "Positive";
+    } else if (number < 0) {
+        return "Negative";
+    } else if (number === 0) {
+        return "Zero";
+    } else {
+        return "Invalid number!";
+    }
+}
+
+// 1) Get input
+// let inputNumber = prompt("Enter a number:");
+let inputNumber = 23423;
+// 2) Prase the input as number
+let parsedNumber = parseInt(inputNumber);
+// 3) Check if the parsed value is a valid number !!!! (optional step for now...)
+// 4) If the number is valid => Get numbers stats
+
+// console.log(getNumberStats(parsedNumber));
+// // code ...
+// console.log(getNumberStats(parsedNumber));
+// // code ...
+// console.log(getNumberStats(parsedNumber));
+
+let numberStats = getNumberStats(parsedNumber); // returns value, that value can be assigned to a variable
+console.log(numberStats);
+console.log(`The number ${parsedNumber} is ${numberStats}`);
+
+
+function testReturn() {
+    return 100;
+}
+// THE RETURN VALUE MUST BE USED IN SOME WAY, IT'S NOT ENOUGH TO JUST CALL THE FUNCTION
+testReturn();
+let testReturnValue = testReturn();
+console.log(testReturnValue); // 100
