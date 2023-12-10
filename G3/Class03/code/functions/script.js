@@ -79,7 +79,7 @@ function getNumberStats(number) {
     // logic for getting the number stats
     // NOTE: SWITCH statement evalutes ONLY the VALUE of the passed variable
     // switch (number) {
-    //     case number > 0:
+    //     case number > 0:  // THIS WON'T WORK ...
     //         return "Positive";
     //     // break; when we have return statement we don't need break
     //     case number < 0:
@@ -123,6 +123,70 @@ function testReturn() {
     return 100;
 }
 // THE RETURN VALUE MUST BE USED IN SOME WAY, IT'S NOT ENOUGH TO JUST CALL THE FUNCTION
-testReturn();
+testReturn(); // the function is called, the code executed, returns value, BUT that value isn't stored or used in any way
 let testReturnValue = testReturn();
 console.log(testReturnValue); // 100
+
+
+
+console.log("");
+console.log("=========== Function Parameters ===========");
+// *Parameters* => the variables (placeholders) used in the function declaration (num1, num2, num3)
+function logNumbers(num1, num2, num3) {
+    console.log(`Number 1: ${num1}`);
+    console.log(`Number 2: ${num2}`);
+    console.log(`Number 3: ${num3}`);
+    console.log("");
+}
+// *Arguments* => the variables (values) used when the function is executed (10, 20, 30)
+logNumbers(10, 20, 30);
+logNumbers();
+logNumbers(10, 20);
+// logNumbers(10,, 30); // ERROR
+// logNumbers(10, "test", 30);
+logNumbers(10, 20, 30, 40, "extra text"); // EXTRAS ARE IGNORED
+
+// Default (Optional) Parameters
+function logData(data1, data2 = 1000, data3 = "some random default value") {
+    console.log(`Data 1: ${data1}`);
+    console.log(`Data 2: ${data2}`);
+    console.log(`Data 3: ${data3}`);
+    console.log("");
+}
+logData(23, 50, 100);
+logData(23, 50)
+logData(4);
+
+
+
+console.log("");
+console.log("=========== JavaScript Built-in Functions ===========");
+
+// # alert
+// # prompt
+// # console.log()
+// # parseInt(value) => parses value into integer
+// # parseFloat(value)
+console.log(parseInt(2.252)); // 2
+console.log(parseFloat(2.252)); // 2.252
+// # Number(value)
+let parsedNumberValue = Number("234.4343")
+console.log(parsedNumberValue);
+// # Boolean(value)
+console.log(Boolean("")); // false
+console.log(Boolean(" ")); // true
+// newer syntax => instead of 'Boolean' we use '!!'
+// console.log(!!"");
+// console.log(!!"test");
+// # ... many more ...
+
+
+
+console.log("");
+console.log("=========== Ways of parsing strings into numbers ===========");
+// 1) parseInt(value)
+// 2) parseFloat(value)
+// 3) Number(value)
+// 4) Using the '+' operator
+console.log(Number("23432.3434")); //23432.3434
+console.log(+"23432.3434"); //23432.3434
