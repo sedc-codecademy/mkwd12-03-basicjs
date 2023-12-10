@@ -14,7 +14,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="assets/css/bootstrap.css">		
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
 		<link rel="stylesheet" href="assets/css/reveal.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
@@ -49,10 +49,10 @@
 					<img src="assets/img/js.png" alt="js" style="border:none; box-shadow:none; width:300px; height:300px;">
 					<p>
 						<img src="assets/img/lg.png" alt="logo" style="border:none; box-shadow:none;" /><br/>
-						<small>Lecture by <a href="#" target="_blank">Trainer Name</a> & <a href="#" target="_blank">Assistant Name</a> </small></br>
+						<small>Lecture by <a href="#" target="_blank">Ivo Kostovski</a> & <a href="#" target="_blank">Iva Cvetkovska</a> </small></br>
 
 					</p>
-					<p style="font-size: 15px;">© 2022 Seavus Education &amp; Development Center</p>
+					<p style="font-size: 15px;">© 2023 Seavus Education &amp; Development Center</p>
 				</section>
 
 				<!-- Slide 2 -->
@@ -87,7 +87,7 @@
 						<li>parseInt() is used to parse all sorts of values in to whole numbers (integers)</li>
 						</ul>
 				</section>
-				
+
 				<!-- Slide 4 -->
 				<section style="text-align: left;">
 					<h2>Switch statements</h2>
@@ -122,7 +122,7 @@
 				<section style="text-align: left;">
 					<h2>"fall through" scenario</h2>
 					<ul>
-						<li> If you omit <i>break</i> from a <i>case</i>, and that <i>case</i> matches or runs, execution will continue with the next <i>case</i>'s statements regardless of that case matching</li>	
+						<li> If you omit <i>break</i> from a <i>case</i>, and that <i>case</i> matches or runs, execution will continue with the next <i>case</i>'s statements regardless of that case matching</li>
 					</ul>
 					<p>
 						<pre><code class="hljs" data-trim contenteditable>
@@ -136,7 +136,7 @@
 			break;
 		default:
 			//no value match found, do default option
-			break; 
+			break;
 	}
 						</code></pre>
 					</p>
@@ -171,7 +171,7 @@
 						</div>
 					</section>
 				</section>
-				
+
 				<!-- Slide 9 -->
 				<section style="text-align: left;">
 					<h2>What is a function?</h2>
@@ -181,9 +181,9 @@
 					</ul>
 				</section>
 
-				
+
 				<!-- Slide 10 -->
-				<section>	
+				<section>
 					<section style="text-align: left;">
 						<h2>Function declaration</h2>
 						<ul>
@@ -238,7 +238,7 @@ myFunction();
 								</ul>
 							</li>
 						</ul>
-					
+
 				</section>
 
 				<!-- Slide 15 -->
@@ -264,7 +264,7 @@ function myFunction(x, y) {
 }
 
 
-myFunction(1,3);	
+myFunction(1,3);
 myFunction(2,5);
 myFunction(100,232131);
 						</code></pre></p>
@@ -418,14 +418,14 @@ function makeRequest(url, timeout = 2000, callback = function() {}) {
 					<br>
 					<h2>Scope</h2>
 					<ul>
-						<li>Scope determines the accessibility (visibility) of these variables.</li>						
+						<li>Scope determines the accessibility (visibility) of these variables.</li>
 						<li>Variables defined inside a function are not accessible (visible) from outside the function.</li>
 						<li>A collection of variables as well as the rules for how those variables are accessed by name.</li>
 						<li>JavaScript has function scope: Each function creates a new scope.</li>
 						<li>No matter <em>where</em> a function is invoked from, or even <em>how</em> it is invoked, its scope is only defined by where the function was declared</li>
 					</ul>
 				</section>
-				
+
 				<!-- Slide 27 -->
 				<section style="text-align: center;">
 					<h2>Function Scope....</h2>
@@ -454,7 +454,7 @@ console.log(foo);		//undefined
 				<section style="text-align: left;">
 					<h2>Variable scope</h2>
 					<p><pre><code class="hljs" data-trim contenteditable>
-let foo = 500;		//global varable							
+let foo = 500;		//global varable
 function simpleFunction   ( ) {
 	//lots of code
 	let foo = 600;		//local varable
@@ -476,7 +476,7 @@ console.log(foo);		//500
 						<li>When you declare a variable, it is available anywhere in that scope, as well as any lower/inner scopes.</li>
 					</ul>
 					<p><pre><code class="hljs" data-trim contenteditable>
-let foo = 500;		//global varable							
+let foo = 500;		//global varable
 function simpleFunction   ( ) {
 //lots of code
 foo = 600;		//the global varable
@@ -521,14 +521,14 @@ console.log(a);	// 1 -- oops, auto global variable :(
 			<section style="text-align: left;">
 				<h2 style="color:#e8643b;">What the result would be?</h2>
 				<p><pre><code class="hljs" data-trim contenteditable>
-let message = "Outside the function";						
+let message = "Outside the function";
 function warning(message){
-	console.log(message);	
+	console.log(message);
 }
 
 
 warning("Inside the function");
-console.log(message);		
+console.log(message);
 				</code></pre></p>
 			</section>
 
@@ -554,7 +554,7 @@ function farToCel(celsius){
 }
 function celToFar(farenheits){
 	let result = (5/9) * (farenheits-32);
-	return result;  
+	return result;
 }
 
 //The person chooses what to calculate
@@ -609,7 +609,7 @@ if(personChoice === "F"){
 					<ul>
 					<li>Calculates your dog's age based on the conversion rate of 1 human year to 7 dog years</li>
 					<li><b>Note: </b>Call the function in console to see answer</li>
-					<li><b>Bonus: </b>Make the same function work for converting dog to human years as well</li>			
+					<li><b>Bonus: </b>Make the same function work for converting dog to human years as well</li>
 				</ul>
 			</section>
 
@@ -625,8 +625,8 @@ if(personChoice === "F"){
 					<li><b>Bonus: </b> Make it work with prompt()!</li>
 				</ul>
 				<br>
-				<p>trainer@mail.com</p>
-				<p>assistant@mail.com</p>	
+				<p>ivo.kostovski@gmail.com</p>
+				<p>ivacvetkovska.sedc@gmail.com</p>
 			</section>
 
 			<!-- Slide 41 -->
@@ -766,7 +766,7 @@ if(personChoice === "F"){
 							animateImage.className += ' borders';
 
 							setTimeout( function(){
-								document.getElementById('left').style.display = 'block';  
+								document.getElementById('left').style.display = 'block';
 							}, 500 );
 
 						}, 500 );
@@ -774,7 +774,7 @@ if(personChoice === "F"){
 					}, 500 );
 
 				}, 500 );
-				
+
 			}
 
 			function startFuncNameAnimation(){
