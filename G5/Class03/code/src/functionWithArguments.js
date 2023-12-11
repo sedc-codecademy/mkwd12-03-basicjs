@@ -1,5 +1,4 @@
 // No return
-
 function greeting(firstName, lastName) {
     console.log(`Hello ${firstName} ${lastName}`);
 }
