@@ -29,9 +29,36 @@ function greet() {
 
 // function with one parameter
 // studentName is a placeholder for a value that will be passed when the function greetStudent is called
+let student1 = "Vlatko";
+let student2 = "Mirko";
+let student3 = "Kiro";
+let studentFromHome = ["Kiro", "Mirko", "Vlatko"];
+let studentFromFaculty7 = ["Kiro", "Mirko", "Vlatko"];
+let studentFromFaculty6 = ["Kiro", "Mirko", "Vlatko"];
+let studentFromFaculty5 = ["Kiro", "Mirko", "Vlatko"];
+let studentFromFaculty4 = ["Kiro", "Mirko", "Vlatko"];
+let studentFromFaculty3 = ["Kiro", "Mirko", "Vlatko"];
+let studentFromFaculty2 = ["Kiro", "Mirko", "Vlatko"];
+
+function greetStudnts(inputArray) {
+    for(let i = 0; i < inputArray.length; i++) {
+        console.log("Hello", inputArray[i]);
+    }
+}
+
+console.log(`Hello ${student1}, Qinshift Academy wishes you happy holidays!`);
+console.log(`Hello ${student2}, Qinshift Academy wishes you happy holidays!`);
+console.log(`Hello ${student3}, Qinshift Academy wishes you happy holidays!`);
+
 function greetStudent(studentName) {
     console.log(`Hello ${studentName}, Qinshift Academy wishes you happy holidays!`);
 }
+
+greetStudent(student1);
+greetStudent(student2);
+greetStudent(student3);
+
+
 
 
 
