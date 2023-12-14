@@ -93,4 +93,6 @@ let parseIntResult = parseInt(userInput);
 // Use Number() for parsing string into number because it's more accurate and it is more consistent
 let numberResult = Number(userInput);
 
+// Number.isNaN(value  )
+
 console.log(userInput, parseIntResult, numberResult);
