@@ -72,4 +72,21 @@ function printLargestName(arrayOfValues){
 let largestMovie = printLargestName(movies);
 console.log(largestMovie);
 
+// To find the smallest 
+function printSmallestLength(arrayOfValues){
+    // let largestValue = ""// length is 0
+    let largestValue = arrayOfValues[0]
+    let i = 0;
+    while(i < arrayOfValues.length){
+  
+        if(arrayOfValues[i].length < largestValue.length){
+       
+            largestValue = arrayOfValues[i];
+        }
 
+        i++
+    }
+
+
+    return largestValue;
+}
