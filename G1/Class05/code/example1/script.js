@@ -104,3 +104,61 @@ let colorsList = document.querySelector('#colors');
 for (let color of colors) {
     colorsList.innerHTML += `<li>${color}</li>`;
 }
+
+// Getting children
+
+let footer = document.querySelector('footer')
+
+// console.log(footer)
+
+// let listInFooter = footer.firstChild
+// let buttonInFooter = footer.lastChild
+
+// console.log(listInFooter)
+// console.log(buttonInFooter)
+
+// Creating and appending elements
+
+let footerHeading = document.createElement('h1');
+console.log(footerHeading)
+
+let footerHeadingText = document.createTextNode('This is the footer');
+console.log(footerHeadingText)
+
+footerHeading.appendChild(footerHeadingText)
+console.log(footerHeading)
+
+footer.appendChild(footerHeading)
+
+// Shortcut
+footer.innerHTML += `<h1>This is the footer</h1>`
+
+// Working with attributes
+
+let isSportParagraphRequired = sportParagraph.hasAttribute('required');
+console.log(isSportParagraphRequired)
+
+let sportParagraphHasBorderClass = sportParagraph.classList.contains('red-border')
+console.log(sportParagraphHasBorderClass)
+
+// Example with functions
+
+// function addNumbers(a, b){
+//     if(false) {
+//         // something 
+//         return a+b
+//     } else if (false) {
+//         // something 
+//         return a-b
+//     } else {
+//         console.log('Invalid input!')
+//         return null
+//     }
+// }
+
+// let sum = addNumbers(2, 2);
+
+// if (sum) {
+//     let division = sum / 2;
+// }
+// console.log(sum)
