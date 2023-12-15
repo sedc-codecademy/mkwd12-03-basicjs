@@ -44,53 +44,76 @@ console.log("Kiril has an avg grade of:", kirilAvgGrade)
 function shopping() {
     let chosenTypeOfClothing; // info of selected value for type of clothing - gets populated ONLY if the value is proper (shirt, pants...)
     let chosenTypeOfColor;
+    let continueShopping = true;
+    let cart = [];
     
-    // Execute the code UNTIL the user HASN'T selected proper type of clothing
-    while(!chosenTypeOfClothing) {
-        // clothing will store the answer for the question for clothing type
-        let clothing = prompt('What type of clothing do you want to buy?');
+    while(continueShopping) {
+        // Execute the code UNTIL the user HASN'T selected proper type of clothing
+        while(!chosenTypeOfClothing) {
+            // clothing will store the answer for the question for clothing type
+            let clothing = prompt('What type of clothing do you want to buy?');
 
-        // Decide if imputed clothing is available or not
-        switch (clothing) {
-            // There are two possible cases:
-            // 1. imputed clothing is one of the following values
-            case 'pants':
-            case 'shirt':
-            case 'sneakers':
-            case 'sandals':
-                // if it's one of the following values, set it as value to
-                // chosenTypeOfClothing which will also stop the while iteration
-                chosenTypeOfClothing = clothing
-                break; // STOP execution
-            default:
-                // Provide info that clothing is not available
-                alert(`We don't have ${clothing}, please choose another clothing type.`)
-        }       
+            // Decide if imputed clothing is available or not
+            switch (clothing) {
+                // There are two possible cases:
+                // 1. imputed clothing is one of the following values
+                case 'pants':
+                case 'shirt':
+                case 'sneakers':
+                case 'sandals':
+                    // if it's one of the following values, set it as value to
+                    // chosenTypeOfClothing which will also stop the while iteration
+                    chosenTypeOfClothing = clothing
+                    break; // STOP execution
+                default:
+                    // Provide info that clothing is not available
+                    alert(`We don't have ${clothing}, please choose another clothing type.`)
+            }       
+        }
+
+        while(!chosenTypeOfColor) {
+            // clothing will store the answer for the question for clothing type
+            let color = prompt(`What type of color do you want the ${chosenTypeOfClothing} to be in?`);
+
+            // Decide if imputed clothing is available or not
+            switch (color) {
+                // There are two possible cases:
+                // 1. imputed clothing is one of the following values
+                case 'white':
+                case 'black':
+                case 'yellow':
+                case 'green':
+                    // if it's one of the following values, set it as value to
+                    // chosenTypeOfClothing which will also stop the while iteration
+                    chosenTypeOfColor = color
+                    break; // STOP execution
+                default:
+                    // Provide info that clothing is not available
+                    alert(`We don't have ${color}, please choose another color.`)
+            }       
+        }
+    
+        let continueShoppingAnswer = prompt('Do you want to continue shopping?')
+
+        cart.push(`${chosenTypeOfColor} ${chosenTypeOfClothing}`)
+
+        if (continueShoppingAnswer === 'yes') {
+            
+            chosenTypeOfClothing = null;
+            chosenTypeOfColor = null;
+            alert('Amazing, lets buy something else...')
+        } else {
+            let cartItemsList = document.querySelector('#cart-items');
+
+            for (let item of cart) {
+                cartItemsList.innerHTML += `<li>${item}</li>`
+            }
+
+            continueShopping = false
+            alert('Thanks for shopping with us!')
+            // show the articles from cart in HTML
+        }
     }
-
-    while(!chosenTypeOfColor) {
-        // clothing will store the answer for the question for clothing type
-        let color = prompt(`What type of color do you want the ${chosenTypeOfClothing} to be in?`);
-
-        // Decide if imputed clothing is available or not
-        switch (color) {
-            // There are two possible cases:
-            // 1. imputed clothing is one of the following values
-            case 'white':
-            case 'black':
-            case 'yellow':
-            case 'green':
-                // if it's one of the following values, set it as value to
-                // chosenTypeOfClothing which will also stop the while iteration
-                chosenTypeOfColor = color
-                break; // STOP execution
-            default:
-                // Provide info that clothing is not available
-                alert(`We don't have ${color}, please choose another color.`)
-        }       
-    }
-    
-    
 }
 
 shopping();
