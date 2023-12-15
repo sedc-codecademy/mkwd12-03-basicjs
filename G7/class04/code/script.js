@@ -100,13 +100,53 @@ let userNumber = 0;
 
 // console.log(`Yay! You guest our secret number ${secretNumber}`);
 
-while(true) {
-    userNumber = parseInt(prompt("Gues our secret number! Pick from 1 - 9"));
-    if(userNumber === secretNumber) {
-        console.log(`Yay! You guest our secret number ${secretNumber}`);
+// while(true) {
+//     userNumber = parseInt(prompt("Gues our secret number! Pick from 1 - 9"));
+//     if(userNumber === secretNumber) {
+//         console.log(`Yay! You guest our secret number ${secretNumber}`);
+//         break;
+//     }
+// }
+
+// for
+
+for(let i = 2; i <= 100; i += 2) {
+    console.log(i);
+}
+
+let workingDays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+
+for (let i = 0; i < workingDays.length; i++) {
+    console.log(`Day: ${workingDays[i]}`);
+}
+
+// print until Wed, withoud Wed
+for (let i = 0; i < workingDays.length; i++) {
+    if(workingDays[i] === "Wed") {
         break;
     }
+    console.log(`Day: ${workingDays[i]}`);
 }
+
+
+// print all days, exept Tue and Thu
+for(let i = 0; i < workingDays.length; i++) {
+    if(workingDays[i] === "Tue" || workingDays[i] === "Thu") {
+        continue;
+    }
+    console.log(`Day: ${workingDays[i]}`);
+}
+
+// for of
+
+for(let day of workingDays) {
+    if(day === "Tue" || day === "Thu") {
+        continue;
+    }
+    console.log(`Day: ${day}`);
+}
+
+
 
 
 
