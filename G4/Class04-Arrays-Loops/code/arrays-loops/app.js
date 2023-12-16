@@ -204,7 +204,7 @@ function generateNumArray(num) {
 function findFavouriteFruit(favFruit, fruitArr) {
   let foundFruit = null;
 
-  for (let fruit of fruits) {
+  for (let fruit of fruitArr) {
     if (fruit === favFruit) {
       foundFruit = fruit;
       break;
