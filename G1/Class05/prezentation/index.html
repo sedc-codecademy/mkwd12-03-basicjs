@@ -452,11 +452,261 @@ myDiv.innerHTML = ""; // removing all code from myDiv
 					    <div class="sl-block-content"><img src="assets/img/work_node.png"></div>
 					</div>
 				</section>
-				
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>Examples</h1>
+					<p>App for students and teachers</p>
+			</section>
+			<section style="text-align: left;">
+					<h2>Creating our HTML page</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+<!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;title>Document&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;div id="app">
+      &lt;div id="title" align="center">&lt;/div>
+      &lt;div id="content">&lt;/div>
+    &lt;/div>
+    &lt;script src="script.js">&lt;/script>
+  &lt;/body>
+&lt;/html>
+				</code></pre></p>
+			</section>
+			<section style="text-align: left;">
+					<h2>Selecting our elements and adding global variables</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+let myApp = document.getElementById("app");
+let titleDiv = myApp.firstElementChild;
+let contentDiv = myApp.children[1];
+
+let students = ["Bob Bobsky", "Jill Cool", "John Doe", "Jane Sky"];
+let subjects = ["Math", "English", "Science", "Sport"];
+let grades = ["A", "B", "A", "C"];
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>Function for printing grades</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+function printGrades(subjects, grades, element){
+    console.log(element);
+    element.innerHTML = ""; // clearing element
+    element.innerHTML += "<ul>";
+    for(let i=0; i < subjects.length; i++){
+        element.innerHTML += `<li>${subjects[i]}: ${grades[i]}</li>`;
+    }
+    element.innerHTML += "</ul>"
+}
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>Function for printing students</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+function printStudents(students, element){
+    element.innerHTML = ""; // clearing element
+    element.innerHTML += "<ol>";
+    for(let student of students){
+        element.innerHTML += `<li>${student}</li>`;
+    }
+    element.innerHTML += "</ol>"
+}
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>Function for deciding what to show on screen</h2>
+					<p><pre><code class="js" data-trim contenteditable>
+function academyPanel(person, name){
+  if(person === "student" && name.length >= 2){ // if its student and has name longer than 1 letter
+    titleDiv.innerHTML += "<h1><b>Hello there " + name + "</b></h1>";
+    titleDiv.innerHTML += "<p>Welcome to your student page</p>";
+    contentDiv.innerHTML += "<h3>Your grades:</h3>"
+    console.log(contentDiv);
+    printGrades(subjects, grades, contentDiv);
+  } else if(person === "teacher" && name.length >= 2){
+    titleDiv.innerHTML += `<h1><b>Hello ${name}!</b></h1>
+    <p>Welcome to your teachers page</p>`;
+    contentDiv.innerHTML += "<h3>Your students:</h3>"
+    printStudents(students, contentDiv);
+  } else {
+    titleDiv.innerHTML += "<h1><b>Your login was unsucessfull</b></h1>";
+    titleDiv.innerHTML += "<p>Please try again!</p>";
+  }
+}
+					</code></pre></p>
+				</section>
+				<section style="text-align: left;">
+					<h2>Calling the function and getting inputs</h2>
+					<p><pre><code class="hljs" data-trim contenteditable>
+let input = prompt("Are you a student or a teacher?");
+let name = prompt("What is your name?");
+academyPanel(input, name);
+					</code></pre></p>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Changing CSS</h2>
+					<ul>
+						<li>CSS style of an element can also be edited in JavaScript</li>
+						<li>All styles that you can access in CSS you can change in JavaScript, but with camelCase names</li>
+						<p><pre><code class="js" data-trim contenteditable>
+let element = document.getElementById("myElement");
+element.style.color = "red"; // Changes text color to red
+element.style.display = "none"; // Removes the element
+element.style.backgroundColor = "blue"; // Changes background color to blue
+						</code></pre></p>
+					</ul>
+				</section>
+
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>Exercises</h1>
+				</section>
+<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #1</h2>
+					<h6></h6>
+									<p><pre><code class="hljs" data-trim contenteditable>
+&lt;div id="first" class="aDiv">
+  &lt;h1 id="myTitle">Yea! Cool page&lt;/h1>
+  &lt;p class="paragraph">
+    This is an exercise. It's pretty easy
+  &lt;/p>
+&lt;/div>
+&lt;div class="anotherDiv">
+  &lt;p class="paragraph second">
+    No really, It's easy!
+  &lt;/p>
+  &lt;text>
+    It's about selecting elements and
+  &lt;/text>
+&lt;/div>
+&lt;div>
+  &lt;h1>This should be changed&lt;/h1>
+  &lt;h3>And also this!&lt;/h3>
+&lt;/div>
+					</code></pre></p>
+				</section>
+				</section>
+<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #1</h2>
+					<h6>Manipulate the DOM</h6>
+				<ul>
+					<li>Select the first <b>div</b></li>
+					<li>Select all <b>paragraphs</b></li>
+					<li>Select the last <b>div</b></li>
+					<li>Select the <b>header 3</b> in the last <b>div</b></li>
+					<li>Select the <b>header 1</b> in the last <b>div</b></li>
+					<li>Get the text from the first <b>paragraph</b> in the second <b>div</b></li>
+					<li>Add the word <b>"text"</b> to the <b>text</b> element in the second <b>div</b></li>
+					<li>Change the text of the <b>header 1</b> in the last <b>div</b></li>
+					<li>Change the text of the <b>header 3</b> in the last <b>div</b></li>
+					<li><strong>Note:</strong>You can't change the HTML</li>
+				</ul>
+				</section>
+				<section style="text-align: left;">
+						<h2>Exercise #1 Solution</h2>
+						<p><pre><code class="hljs" data-trim contenteditable>
+let firstDiv = document.querySelector("div");
+let allParagraphs = document.getElementsByTagName("p");
+let lastDiv = document.getElementsByTagName("body")[0].lastElementChild;
+let header3last = lastDiv.getElementsByTagName("h3")[0];
+let header1last = header3last.previousElementSibling;
+let paragraphSecondText = document.getElementsByClassName("second")[0].innerText;;
+document.querySelector("text").innerText += " text!";
+header3last.innerText = "Text added from JS";
+header1last.innerText = "Text added from JS also";
+						</code></pre></p>
+					</section>
+				<section style="text-align: left;">
+				<h2 style="color:#e8643b;">Student Exercise - #2</h2>
+				<h6>Weight calculator in chickens</h6>
+				<p>Want to know how you wiegh in chikens? No problem!</p>
+				<ul>
+					<li>Write a function named weightInChickens that:</li>
+					<li>Takes an input weigh in kilograms</li>
+					<li>Calculates weight in chickens ( 1 chicken = 0.5kg )</li>
+					<li>The input should be entered through prompt</li>
+					<li>The result should be shown in the HTML of the page</li>
+					<li><b>Note:</b>The html page needs to have title and result paragraph</li>
+					<li><strong>Time to accomplish:</strong> 15 minutes.</li>
+				</ul>
+			</section>
+			<section style="text-align: left;">
+					<h2>Exercise #2 Solution HTML</h2>
+					<p><pre><code class="js" data-trim contenteditable>
+<h1 align="center">BE AMAZED! SEE HOW MUCH YOU WEIGHT IN CHICKENS</h1>
+<div align="center" id="result"></div>
+					</code></pre></p>
+				</section>
+			<section style="text-align: left;">
+					<h2>Exercise #2 Solution JS</h2>
+					<p><pre><code class="js" data-trim contenteditable>
+function weightInChickens(weight){
+  return weight / 0.5;
+}
+
+let resultDiv = document.getElementById("result");
+let input = parseInt(prompt("Please enter how much you weigh:"));
+if(!isNaN(input)){
+  resultDiv.innerHTML = `<h3> ${input}KG is ${weightInChickens(input)} <img src="chicken.png" style="height:2vh"></h3>`
+} else {
+  resultDiv.innerHTML = `<h3> Sorry! Wrong input! Refresh the page again! </h3>`
+}
+					</code></pre></p>
+				</section>
+				<section style="text-align: center;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h2>HOMEWORK Part 1</h2>
+					<p>Change the page with JavaScript</p>
+					<ul>
+					<li>Change the text of all paragraphs and headers with javascript</li>
+					<li><b>Note:</b>The html must not be changed</li>
+					<p><pre><code class="hljs" data-trim contenteditable>
+&lt;div id="first" class="aDiv">
+  &lt;h1 id="myTitle">Yea! Cool page&lt;/h1>
+  &lt;p class="paragraph">
+    This is an exercise. It's pretty easy
+  &lt;/p>
+&lt;/div>
+&lt;div class="anotherDiv">
+  &lt;p class="paragraph second">
+    No really, It's easy!
+  &lt;/p>
+  &lt;text>
+    It's about selecting elements and
+  &lt;/text>
+&lt;/div>
+&lt;div>
+  &lt;h1>This should be changed&lt;/h1>
+  &lt;h3>And also this!&lt;/h3>
+&lt;/div>
+												</code></pre></p>
+				</ul>
+				</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h2>HOMEWORK Part 2</h2>
+					<p>Print all numbers from an array and the sum</p>
+					<ul>
+					<li>Create an array with numbers</li>
+					<li>Print all numbers from the array in a list element, in a new HTML page</li>
+					<li>Print out the sum of all of the numbers below the list</li>
+					<li><b>Bonus:</b> Try printing the whole mathematical equasion as well ( 2 + 4 + 5 = 11) </li>
+				</ul>
+			</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h2>BONUS HOMEWORK</h2>
+					<p>Create a recipe page from inputs</p>
+					<ul>
+					<li>Ask the user for the name of the recipe</li>
+					<li>Ask the user how many ingredients do we need for the recipe</li>
+					<li>Ask the user for the name of every ingredient</li>
+					<li>Print the name of the recipe in the HTML as heading element, ex: h1-h6</li>
+					<li>Print all ingredients as an unordered list in the HTML</li>
+					<li><b>Extra:</b> Use a table if you want to be fancy :)</li>
+				</ul>
+				</section>
 				<section style="text-align: left;">
 					<h1>Thank you!</h1>
 					<p>
-						<a href="#">To be continued...</a> <br>
+						<a href="#">Questions?</a> <br>
 					</p>
 				</section>
 			</div>
