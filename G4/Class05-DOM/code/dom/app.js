@@ -85,3 +85,27 @@ firstDivEl.innerHTML += `
             <li>List Item</li>
         </ul>
 `;
+
+// Exercise 1 solution
+
+const firstDivEl = document.querySelector("div");
+
+const allParagraphs = document.querySelectorAll("p");
+
+const lastDivEl = document.querySelector("section").lastElementChild;
+
+const allDivs = document.querySelectorAll("div");
+
+const lastDivElAlt = allDivs[allDivs.length - 1];
+
+const lastDivH3El = lastDivEl.querySelector("h3"); //lastDivEl.lastElementChild
+const lastDivH1El = lastDivEl.querySelector("h1"); //lastDiv.firstElementChild
+
+const secondParagraphText = document.querySelector(".second").innerText;
+
+const textEl = document.querySelector("text");
+
+textEl.innerText += "TEXT";
+
+lastDivH1El.innerText = "CHANGED BY TRAINER";
+lastDivH3El.innerText = "CHANGED BY TRAINER";
