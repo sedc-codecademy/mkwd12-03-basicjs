@@ -1,19 +1,18 @@
 // let arrayOfNumbers = [1, 25, 2235, 11, -25, 625, 555];
 // let arrayOfNumbers2 = [-325235, 35326, 65753, 2355, -13234];
 
-// function findLargestNumberInArray(someArray) {
-//     let lastBiggestNumber = -Infinity;
-//     let i = 0;
-//     while (i < someArray.length) {
-//         let numberElementFromArray = someArray[i];
-//         if (numberElementFromArray > lastBiggestNumber) {
-//             lastBiggestNumber = numberElementFromArray;
-//         }
-//         i++;
-
-//     }
-//     return lastBiggestNumber;
-// }
+function findLargestNumberInArray(someArray) {
+    let lastBiggestNumber = -Infinity;
+    let i = 0;
+    while (i < someArray.length) {
+        let numberElementFromArray = someArray[i];
+        if (numberElementFromArray > lastBiggestNumber) {
+            lastBiggestNumber = numberElementFromArray;
+        }
+        i++;
+    }
+    return lastBiggestNumber;
+}
 
 // let biggestNumber1 = findLargestNumberInArray(arrayOfNumbers);
 // let biggestNumber2 = findLargestNumberInArray(arrayOfNumbers2);
@@ -53,7 +52,7 @@ for (let dayOfWeek of arrayOfDays) {
 
 function findAllOddOrEvenNumbers(arrayOfNumbers, oddOrEven) {
     if (oddOrEven != 'odd' && oddOrEven != 'even') return null;
-    
+
     let result = 0;
     for (let number of arrayOfNumbers) {
         if (oddOrEven == 'even') {
@@ -74,3 +73,8 @@ let arrayOfNumbers = [2, 3, 4, 5, 6, 7, 3252, 3543];
 
 let result1 = findAllOddOrEvenNumbers(arrayOfNumbers, 'even');
 console.log(result1);
+
+
+
+
+
