@@ -85,11 +85,12 @@ let sedc = ["G1", "G2","G5"];
 
 function createListItem(studentsArray, element){
     //element.innerHTML = "" //clearing element
-    element.innerHTML += "<ol>"
+
+    let orderList = "";
     for(let student of studentsArray){
-        element.innerHTML += `<li>${student}</li>`
+        orderList += `<li>${student}</li>`
     }
-    element.innerHTML += "</ol>"
+    element.innerHTML += `<ol>${orderList}</ol>`
 }
 
 createListItem(students, myStudent);
