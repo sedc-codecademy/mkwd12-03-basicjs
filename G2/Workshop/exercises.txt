@@ -1,0 +1,8 @@
+1.Define a function with one parameter. The function returns a string starting with "The given argument was: " and ends with ". Ok?". Insert the argument between those two strings.
+
+2.Define a function that takes two parameters. The function returns the average of both.
+
+3.Define a function that takes an array of numbers as its parameter. The function returns the array's length, the smallest element, the largest element, and the average of all elements.
+Because a function can return only a single element, all those computed values must be packed into an array. This array is the return value.
+
+4.Define a function for describing a car. It takes four parameters: producer, model, horsepower, and color. The first two are mandatory; the last two are optional. Define default values for the last two parameters, e.g., "unknown".

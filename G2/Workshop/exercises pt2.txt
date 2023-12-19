@@ -1,0 +1,5 @@
+1. Write a program that will allow someone to guess a four digit pin exactly 4
+times. If the user guesses the number correctly. It prints “That was
+correct!” Otherwise it will print “Sorry that was wrong.” Program stops after the 4th attempt of if they got it right.
+
+2. Write a JavaScript program that iterates integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers multiples of both three and five print "FizzBuzz".
