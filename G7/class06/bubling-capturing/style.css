@@ -1,0 +1,33 @@
+/* style.css */
+* {
+    font-weight: 700;
+  }
+  #div01 {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(212, 161, 208);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #div02 {
+    width: 350px;
+    height: 350px;
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #div03 {
+    width: 150px;
+    height: 150px;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
