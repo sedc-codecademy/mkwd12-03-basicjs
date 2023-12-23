@@ -52,7 +52,7 @@ let tableBody = document.getElementById('data')
 // ?
 
 // Events
-addButton.addEventListener('click', (event) => {
+addButton.addEventListener('click', function (event) {
     event.preventDefault();
     
     // - Get the values from inputs
@@ -82,12 +82,34 @@ addButton.addEventListener('click', (event) => {
             <td>${user.lastName}</td>
             <td>${user.phoneNumber}</td>
             <td>
-                <button type="button">Edit</button>
-                <button type="button">Delete</button>
+                <button type="button" id="${user.phoneNumber}">Delete</button>
             </td>
         </tr>
     `
 
     // - Insert the table row to the table body
     tableBody.innerHTML += tableRow
+
+    let firstDeleteBtn = document.getElementById(user.phoneNumber)
+    
+    firstDeleteBtn.addEventListener('click', function (event) {
+        // Find if the user in the array
+        let usersPhoneNumber = event.target.id;
+        let foundUser;
+
+        for (let user of users) {
+            if (user.phoneNumber === usersPhoneNumber) {
+                foundUser = user
+            }
+        }
+
+        // Validate user existence
+        if (!foundUser) {
+            alert('No such user!')
+            return
+        }
+
+        // Remove the user from the table
+        tableBody.innerHTML = ''
+    })
 })
