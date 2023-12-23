@@ -1,0 +1,9 @@
+h1 {
+    text-align: center;
+}
+
+.parent-div {
+    /* display: flex;
+    justify-content: space-between; */
+    margin-top: 150px;
+}
