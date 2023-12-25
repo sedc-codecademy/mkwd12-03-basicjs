@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            #flex{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+              width:50%;
+              gap:2px;
+            }
+            input{
+                font-size:24px;
+                color:coral;
+            }
+            button{
+                font-size:24px;
+                background-color: coral;
+                color:white;
+                border:none;
+            }
+
+    </style>
+</head>
+<body>
+<div id="flex">
+    <input type="text" id="firstName" placeholder="Enter first name"/>
+    <input type="text" id="lastName" placeholder="Enter last name"/>
+    <input type="number" id="age" placeholder="Enter age"/>
+
+    <button id="btn">SAVE</button>
+
+    <ul id="studentsList">
+
+    </ul>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
