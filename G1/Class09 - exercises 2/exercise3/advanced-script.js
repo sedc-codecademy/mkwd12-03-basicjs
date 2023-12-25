@@ -1,4 +1,4 @@
-// Data - single source of truth
+// Data
 let todoData = [];
 
 // Selected Elements
@@ -11,23 +11,22 @@ function renderListItems(todos) {
   list.innerHTML = "";
 
   for (let i = 0; i < todos.length; i++) {
-    let todo = todos[i];
-
     let listItem = document.createElement("li");
     let checkbox = document.createElement("input");
 
     checkbox.type = "checkbox";
-    checkbox.checked = todo.isCompleted;
+    checkbox.checked = todos[i].isCompleted;
 
     checkbox.addEventListener("change", function () {
-      todoData[i].isCompleted = !todoData[i].isCompleted;
-      renderListItems(todoData);
+      toggleTodoCompetition(i);
     });
 
-    let todoText = document.createTextNode(todo.name);
+    let todoText = document.createTextNode(todos[i].name);
 
-    if (todo.isCompleted) {
+    if (todos[i].isCompleted) {
       listItem.style.textDecoration = "line-through";
+    } else {
+      listItem.style.textDecoration = "none";
     }
 
     listItem.appendChild(checkbox);
@@ -37,9 +36,19 @@ function renderListItems(todos) {
   }
 }
 
+function toggleTodoCompetition(index) {
+  todoData[index].isCompleted = !todoData[index].isCompleted;
+  renderListItems(todoData);
+}
+
 // Events
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
+
+  if (!input.value) {
+    alert("You must have To D value!");
+    return;
+  }
 
   // Take the inputs value
   let todo = {
