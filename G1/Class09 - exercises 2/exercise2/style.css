@@ -1,0 +1,16 @@
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+form {
+    padding: 10px;
+    margin: 5px 0;
+
+    > input, label {
+        display: block;
+    }
+}
