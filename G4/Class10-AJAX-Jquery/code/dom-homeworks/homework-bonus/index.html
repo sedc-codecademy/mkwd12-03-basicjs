@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>Recipe Book</h1>
+
+    <section>
+      <form>
+        <div>
+          <label for="recipeName">Recipe Name</label>
+          <input type="text" id="recipeName" />
+        </div>
+        <div>
+          <label for="ingCount">Number of ingredients</label>
+          <input type="number" id="ingCount" />
+        </div>
+        <button type="button" id="addBtn">ADD!</button>
+        <div class="ingredients-controls"></div>
+        <button id="saveBtn" type="button">SAVE!</button>
+      </form>
+      <p class="error-msg"></p>
+      <h2 class="recipe-heading">Placeholder Name</h2>
+      <ul class="ingredients-list">
+        <li>Random Ing</li>
+        <li>Random Ing</li>
+        <li>Random Ing</li>
+        <li>Random Ing</li>
+        <li>Random Ing</li>
+      </ul>
+    </section>
+  </body>
+</html>
