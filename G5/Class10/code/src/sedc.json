@@ -1,0 +1,14 @@
+{
+    "trainer": "Trainer Name",
+    "assistant": "Assistant Name",
+    "students": [
+        "Bob",
+        "Samantha", 
+        "Chris", 
+        "Jill",
+        "Greg"
+    ],
+    "academy": "SEDC",
+    "group": 5,
+    "isOnline": true
+}

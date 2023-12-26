@@ -1,0 +1,15 @@
+{
+    "title": "The Lord of the Rings - The Return of the King",
+    "author": "John Ronald Reuel Tolkein",
+    "publicationYear": 1955,
+    "isFiction": true,
+    "genres": ["Fantasy", "Sci-Fi"],
+    "publisher": {
+        "name": "Rayner Stephens Unwin",
+        "location": "London"
+    },
+    "ratings": {
+        "reviews": 130,
+        "average": 4.9
+    }
+}

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4d2de32e-4e2a-4d9f-b91b-b0022bccbde6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Class01/prezentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Class01/prezentation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Class02/prezentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Class02/prezentation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Class03/prezentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Class03/prezentation/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +21,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2ZLNeVS8xd0eSN2LIKkaOtVuAHy" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -36,6 +37,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -48,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702197496392</updated>
       <workItem from="1702197498191" duration="160000" />
+      <workItem from="1703521784379" duration="2146000" />
     </task>
     <servers />
   </component>
