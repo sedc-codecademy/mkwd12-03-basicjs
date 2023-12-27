@@ -1,3 +1,5 @@
+// XML is the older alternative for JSON
+
 // {
 /* <note>
   <to>Jill</to>

@@ -1,4 +1,4 @@
-// XMLHttpRequest
+// XMLHttpRequest is the first and oldest JS way of making a request
 
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
