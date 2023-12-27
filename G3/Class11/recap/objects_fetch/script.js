@@ -36,6 +36,7 @@ function transformData(responseData) {
         let joke = new Joke(responseData[i].type, responseData[i].setup, responseData[i].punchline);
         resultArray.push(joke);
     }
+    console.log(resultArray);
     return resultArray;
 }
 
