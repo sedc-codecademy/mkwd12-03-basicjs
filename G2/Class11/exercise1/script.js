@@ -11,3 +11,9 @@
  4. App will showcase the bought clothing with it's color
  in the list
 */
+
+function shopping() {
+  // Add code here...
+}
+
+shopping();
