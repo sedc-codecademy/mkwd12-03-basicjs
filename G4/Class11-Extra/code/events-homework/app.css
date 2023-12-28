@@ -1,0 +1,18 @@
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+form {
+  display: grid;
+  row-gap: 10px;
+}
+
+.form-group {
+  display: grid;
+  max-width: 200px;
+}
+
+button {
+  max-width: 200px;
+}
