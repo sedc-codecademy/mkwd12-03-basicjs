@@ -13,7 +13,44 @@
 */
 
 function shopping() {
-  // Add code here...
+  let chosenTypeOfClothing;
+  let chosenColor;
+
+  while (!chosenTypeOfClothing) {
+    let clothing = prompt(`What type of clothing do you want to buy?`);
+
+    switch (clothing) {
+      case "pants":
+      case "shirt":
+      case "sneakers":
+      case "sandals":
+        chosenTypeOfClothing = clothing;
+        break;
+      default:
+        alert(`We don't have ${clothing}, please choose another type.`);
+    }
+  }
+
+  while (!chosenColor) {
+    let color = prompt(
+      `Please choose a color in which you want the ${chosenTypeOfClothing} to be in.`
+    );
+
+    switch (color) {
+      case "white":
+      case "black":
+      case "yellow":
+      case "green":
+        chosenColor = color;
+        break;
+      default:
+        alert(`We don't have such color, choose another color.`);
+    }
+  }
+
+  let continueShopping = confirm("Do you want to continue shopping?");
+
+  console.log(continueShopping);
 }
 
 shopping();
