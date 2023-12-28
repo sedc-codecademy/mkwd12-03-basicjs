@@ -15,42 +15,62 @@
 function shopping() {
   let chosenTypeOfClothing;
   let chosenColor;
+  let continueShopping = true;
+  let cart = [];
 
-  while (!chosenTypeOfClothing) {
-    let clothing = prompt(`What type of clothing do you want to buy?`);
+  while (continueShopping) {
+    while (!chosenTypeOfClothing) {
+      let clothing = prompt(`What type of clothing do you want to buy?`);
 
-    switch (clothing) {
-      case "pants":
-      case "shirt":
-      case "sneakers":
-      case "sandals":
-        chosenTypeOfClothing = clothing;
-        break;
-      default:
-        alert(`We don't have ${clothing}, please choose another type.`);
+      switch (clothing) {
+        case "pants":
+        case "shirt":
+        case "sneakers":
+        case "sandals":
+          chosenTypeOfClothing = clothing;
+          break;
+        default:
+          alert(`We don't have ${clothing}, please choose another type.`);
+      }
+    }
+
+    while (!chosenColor) {
+      let color = prompt(
+        `Please choose a color in which you want the ${chosenTypeOfClothing} to be in.`
+      );
+
+      switch (color) {
+        case "white":
+        case "black":
+        case "yellow":
+        case "green":
+          chosenColor = color;
+          break;
+        default:
+          alert(`We don't have such color, choose another color.`);
+      }
+    }
+
+    cart.push(`${chosenColor} ${chosenTypeOfClothing}`);
+
+    continueShopping = confirm("Do you want to continue shopping?");
+
+    if (continueShopping) {
+      // repeat everything from above
+      alert("Amazing, lets buy something else...");
+      chosenTypeOfClothing = null;
+      chosenColor = null;
+    } else {
+      // print chosen clothing
+      let list = document.querySelector("#list");
+
+      for (let item of cart) {
+        list.innerHTML += `<li>${item}</li>`;
+      }
+
+      alert("Thanks for shopping with us");
     }
   }
-
-  while (!chosenColor) {
-    let color = prompt(
-      `Please choose a color in which you want the ${chosenTypeOfClothing} to be in.`
-    );
-
-    switch (color) {
-      case "white":
-      case "black":
-      case "yellow":
-      case "green":
-        chosenColor = color;
-        break;
-      default:
-        alert(`We don't have such color, choose another color.`);
-    }
-  }
-
-  let continueShopping = confirm("Do you want to continue shopping?");
-
-  console.log(continueShopping);
 }
 
 shopping();
