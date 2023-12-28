@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>JavaScript</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<!-- Slide 1 -->
+			<section style="text-align: center;">
+				<h1>JavaScript</h1>
+				<img src="assets/img/js.png" alt="js" style="border:none; box-shadow:none; width:300px; height:300px;">
+				<p>
+					<img src="assets/img/lg.png" alt="logo" style="border:none; box-shadow:none;" /><br />
+					<small>Lecture by <a href="#" target="_blank">Aleksandra Mitkovska</a> & <a href="#" target="_blank">Nikola Filkoski</a>
+					</small></br>
+
+				</p>
+				<p style="font-size: 15px;">© 2022 Seavus Education &amp; Development Center</p>
+			</section>
+
+			<!-- Slide 2 -->
+
+			<section>
+				<h2>LOOKING BACK AT VARIABLES</h2>
+				<p>
+					Declare variables with different values :</br>
+					1.number between 0-9</br>
+					2.string "We are learning JS"</br>
+					3. bool true	</br>
+					4. array with numbers from 11 to 16</br>
+					5. object with firstName and lastName properties</br></br>
+
+					Log the type of each variable to the console.
+
+				<p> 
+							
+			</section>
+			<section>
+				<h2>LOOKING BACK AT ARRAYS</h2>
+				<p>
+					Create an array called fruits with the elements 'apple', 'banana', and 'orange'.</br>
+					Now manipulate the array:</br>
+					- add "pineapple" at the end of the array </br>
+					- log in the console "This array has __ items"</br>
+					- remove "apple" from the array	</br>
+					-log in the console the modified array
+				<p> 
+							
+			</section>
+			<section>
+				<h2>LOOKING BACK AT FUNCTIONS</h2>
+				<p>
+					Write a function named multiply that takes two parameters and returns their product.
+				<p> 
+							
+			</section>
+		
+			<section>
+				<h2>LOOKING BACK AT LOOPS</h2>
+				<p>
+					Use a for loop to log the numbers from 1 to 5 in the console.
+				<p> </br></br>
+					<p>
+						Use a for...of loop to iterate over the fruits array (from exercise 2) and log each fruit to the console.
+					</p>
+							
+			</section>
+
+			<section>
+				<h2>LOOKING BACK AT DOM AND EVENTS</h2>
+				<p>
+					Create an HTML file with a button. Using JavaScript, add a click event listener to the button that alerts "Button clicked!".
+				<p> 
+							
+			</section>
+
+
+			<section style="text-align: center;">
+				<h2>Exercise 1</h2>
+				<p>
+					Write a JavaScript programm called PhoneBook. You should have three input fields in the html, one for firstName, lastName and phoneNumber. After entering the values into each of them, on clicking on a “Save” button, you should display the newly added contact in a paragraph below the inputs. Make sure the user is entering an appropriate values in the fields! The paragraph should be "Person firstName lastName has phone number phonenumber";					<p> 
+				</p>
+		
+				
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 2</h2>
+				<p>
+					Write a JavaScript programm that will change the style of an existing div for the user.It should have inputs for width,height,padding,margin,background color,color,font-size and it should work as soon as the user inputs the value(EVENT).
+					<p> 
+				</p>
+				<div style="display:flex;width:400px;">
+					<img src="assets/img/Screenshot 2022-12-21 at 13.16.58.png">
+					<img src="assets/img/Screenshot 2022-12-21 at 13.17.05.png">
+				</div>
+				
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 3</h2>
+				<p>
+					Write a JavaScript programm that will count how many times the div is clicked and a reset button to reset the count to zero. 
+					
+					<p>
+						<img src="assets/img/Screenshot 2022-12-21 at 13.11.48.png">
+				</p>
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 4</h2>
+				<img src="assets/img/Screenshot 2022-12-21 at 13.11.13.png">
+				
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 5</h2>
+			
+				<img src="assets/img/Screenshot 2022-12-20 at 19.10.50.png">
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 6</h2>
+				<p>Create a constructor called Person which accepts the name of a person as a string, and his/her age as a number.
+
+					The Person constructor should have a method called describe which returns a string with the following syntax: "name, age years old". So for example, if John is 19 years old then the function describe of his object will return "John, 19 years old".</p>
+			</section>
+			
+			<section style="text-align: center;">
+				<h2>Exercise 7</h2>
+			
+				<img src="assets/img/Screenshot 2022-12-20 at 19.13.09.png">
+			</section>
+			<section style="text-align: center;">
+				<h2>Exercise 8</h2>
+				<p>Write a JavaScript program that will find out which of two inserted integers is closer to 100. Make sure to alert the user if a negative number is inserted!</p>
+				<p> Make sure you use a function!</p>
+				<p>Ex. Input1: 20 <br> Input2: 80 <br> Output: 80 is closer to 100</p>
+			</section>
+
+		
+
+			<section style="text-align: center;">
+				<h2>If you left something on class, then you have a homework :) !</h2>
+			</section>
+			<!-- Slide 19 -->
+		</div>
+
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [{
+				src: 'assets/lib/js/classList.js',
+				condition: function () {
+					return !document.body.classList;
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/marked.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/markdown.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/highlight/highlight.js',
+				async: true,
+				condition: function () {
+					return !!document.querySelector('pre code');
+				},
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			{
+				src: 'assets/plugin/zoom-js/zoom.js',
+				async: true
+			},
+			{
+				src: 'assets/plugin/notes/notes.js',
+				async: true
+			}
+			]
+		});
+	</script>
+
+</body>
+
+</html>

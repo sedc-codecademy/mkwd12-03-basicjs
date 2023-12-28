@@ -47,6 +47,6 @@ Now it’s time for some more challenges! Create a web calculator with all the s
 
 Due Date: _discuss and agree on date_
 
-Contact: _trainer and assistant info_
+Contact: anetastankovskaane@gmail.com and tpelivanov@gmail.com
 
 **Good luck and happy coding!**
