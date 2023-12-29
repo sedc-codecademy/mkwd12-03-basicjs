@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+}
+
+section {
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+
+  max-width: 300px;
+  border-radius: 4px;
+  padding: 0;
+}
+
+ul li {
+  background-color: lightcoral;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+}
+
+.finished {
+  background-color: lightgreen;
+}
+
+.finished span {
+  text-decoration: line-through;
+}
